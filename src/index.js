@@ -31,8 +31,8 @@ app.set('views', path.join(__dirname, 'resources/views'));
 // Home, search, contact
 
 // route init
-    route(app);
+route(app);
 
-    app.listen(port, () => {
-        console.log(`Example app listening at http://localhost:${port}`);
-    });
+app.listen(port, () => {
+    console.log(`Example app listening at http://localhost:${port}`);
+});

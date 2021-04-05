@@ -1,19 +1,35 @@
 <div class="mt-4">
     <h3>SỬA KHÓA HỌC</h3>
-    <form method="POST" action="/courses/{{course._id}}?_method=PUT">
+    <form name="form-edit" method="POST" action="/courses/{{course._id}}?_method=PUT">
         <div class="form-group">
             <label for="name">Tên khóa học</label>
-            <input type="text" class="form-control" value="{{course.name}}" id="name" placeholder="tên khóa học" name="name">
+            <input type="text" class="form-control" value="{{course.name}}" id="name" placeholder="tên khóa học"
+                name="name">
         </div>
         <div class="form-group">
             <label for="description">Mô tả</label>
-            <textarea class="form-control" id="description" placeholder="Mô tả" name="description">{{course.description}}</textarea>
+            <textarea class="form-control" id="description" placeholder="Mô tả"
+                name="description">{{course.description}}</textarea>
         </div>
         <div class="form-group">
             <label for="videoID">Video ID</label>
-            <input type="text" class="form-control" value="{{course.videoID}}" id="videoID" placeholder="Video ID" name="videoID">
+            <input type="text" class="form-control" value="{{course.videoID}}" id="videoID" placeholder="Video ID"
+                name="videoID">
         </div>
 
-        <button type="submit" class="btn btn-primary">LƯU LẠI</button>
+        <button type="submit" class="btn btn-primary abc">LƯU LẠI</button>
     </form>
 </div>
+
+{{!-- <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var actionf = document.forms['form-edit'];
+        var btnsave = document.querySelector(".abc");
+
+        btnsave.onclick = function() {
+console.log(actionf.action)
+        }
+
+    });
+
+</script> --}}
